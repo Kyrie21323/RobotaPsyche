@@ -6,4 +6,4 @@ I wanted to make the fire behing the rocket accoring to how fast the rocket's ve
 
 ## Final
 
-![](media/rocket.png)
+![](media/rocket.mov)
