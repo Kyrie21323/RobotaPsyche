@@ -5,4 +5,5 @@ This project was to make a rocket that accelerates according to the arrow keys p
 I wanted to make the fire behing the rocket accoring to how fast the rocket's velocity was, and although Katie helped me out on how to find the magnitude of the vector into a float variable, for some reason it showed a lot of errors. I was not able to finish the part with the fire, but I made the rocket move, accelerate and change it's speed and direction according to the keys pressed.
 
 ## Final
+
 ![](media/rocket.png)
