@@ -1,10 +1,3 @@
-//Robota Psyche Assignment 1
-//Kyrie Park
-//Description: Draw a rocket that moves toward the cursor, but with using arrow keys, you can slower, faster or even change dirrections of the rocket!
-//============================================================================================================================
-//============================================================================================================================
-
-
 //claiming direction vectors for when the arrow keys are pressed
 PVector right = new PVector(.1, 0);
 PVector left = new PVector(-.1, 0);
@@ -26,7 +19,6 @@ class Rocket {
   PVector velocity;
   PVector acceleration;
   float topspeed;
-  //float lengthVelocity = velocity.mag();
 
   //initial rocket's position, velocity, and acceleration
   Rocket() {
@@ -57,7 +49,8 @@ class Rocket {
     pushMatrix();
     translate(position.x, position.y);
     rotate(velocity.heading());
-
+    
+    float velMag = velocity.mag();
     fill(255, 0, 0);
     rect(0, 40, 40, 10);
     rect(0, 55, 40, 10);
@@ -67,9 +60,10 @@ class Rocket {
     triangle(80, 45, 80, 75, 120, 60);
     fill(150, 150, 150);
     rect(0, 45, 80, 30);
-    //triangle(0, 40, 0, 50, -1*lengthVelocity, 45);
-    //triangle(0, 55, 0, 65, -1*lengthVelocity, 60);
-    //triangle(0, 70, 0, 80, -1*lengthVelocity, 75);
+    fill(255,255,0);
+    triangle(-30, 40, -30, 50, -30 + -1*velMag, 45);
+    triangle(-30, 55, -30, 65, -30 + -1*velMag, 60);
+    triangle(-30, 70, -30, 80, -30 + -1*velMag, 75);
 
     popMatrix();
   }
@@ -90,15 +84,16 @@ class Rocket {
 }
 
 void draw() {
-  background(255);
+  background(100);
   //Draw/move rocket
   rocket.move();
-  rocket.connectEdges();
   rocket.displayRocket();
+  rocket.connectEdges();
 
   //Check if arrow keys are pressed, and move the rocket according to the pressed key
   if (keyPressed == true) {
     pressed = true;
+  //Check is the key pressed is coded
     if (key == CODED) {
       if (keyCode == RIGHT) {
         rocket.skrrt(right);
@@ -117,10 +112,5 @@ void draw() {
   //if key is not pressed, keep the velocity as it is and no acceleration and but the pressed boolean as false
   else {
     pressed = false;
-    PVector stop = rocket.velocity.copy();
-    stop.mult(-1);
-    stop.normalize();
-    stop.mult(0.1);
-    rocket.skrrt(stop);
   }
 }
