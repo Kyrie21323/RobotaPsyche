@@ -1,3 +1,9 @@
+//Kyrie Park
+//Assignment #1
+//Movinig rockets with arrow keys
+//==============================================================================================================
+//==============================================================================================================
+
 //claiming direction vectors for when the arrow keys are pressed
 PVector right = new PVector(.1, 0);
 PVector left = new PVector(-.1, 0);
