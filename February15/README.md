@@ -11,12 +11,13 @@ I fixed it with making the length of the vector to the scale of whatever I put i
 ![](media/forceFieldError3.png)
 And now after having class, I knew what my problem was. I didn't have to rotate my vectors nor subtract the values one by one, but instead make two new vectors and use the .sub function to calculate it, and normalize it at the same time.
 
+Before fixing it
 ```
 float xVec= mouseX-(i*g);
 float yVec = mouseY-(j*g);
 field[i][j] = new PVector (xVec, yVec)
 ```
-
+After fixing it
 ```
 PVector mouse = new PVector(mouseX, mouseY);
 PVector location = new PVector(i*g, j*g);
