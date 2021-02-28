@@ -63,7 +63,7 @@ class Mice {
 
   void display() {
     float theta = velocity.heading() + PI/2;
-    fill(255, 0, 0);
+    fill(0,0,0);
     stroke(0);
     pushMatrix();
     translate(location.x, location.y);
@@ -110,7 +110,7 @@ class Mice {
   }
 
   void getDNA() {
-    print(dna.getShape());
+    //dna.getShape();
     //print(dna.getColor());
   }
 }
