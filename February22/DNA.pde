@@ -7,9 +7,9 @@ class DNA {
     Color = color(int(random(0, 255)),int(random(0, 255)),int(random(0, 255)));
   }
 
-  int getShape() {
-    //print(Shape);
-    return Shape;
+  void getShape() {
+    print(Shape);
+    //return Shape;
   }
 
   color getColor() {
