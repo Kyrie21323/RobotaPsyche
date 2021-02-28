@@ -1,18 +1,22 @@
 class DNA {
-  int Shape;
-  color Color;
+  int miceSize;
+  //color Color;
 
-  DNA() {
-    Shape = int(random(0, 3));
-    Color = color(int(random(0, 255)),int(random(0, 255)),int(random(0, 255)));
+  DNA(int size) {
+    miceSize = size;
+    //Color = color(int(random(0, 255)),int(random(0, 255)),int(random(0, 255)));
   }
 
-  void getShape() {
-    print(Shape);
-    //return Shape;
+  DNA getDNA() {
+    DNA dna = new DNA(miceSize);
+    return dna;
+  }
+  
+  int getSize(){
+    return miceSize;
   }
 
-  color getColor() {
-    return(Color);
-  }
+  //color getColor() {
+  //  return(Color);
+  //}
 }
