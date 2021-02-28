@@ -8,14 +8,11 @@ class DNA {
   }
 
   int getShape() {
-    if (Shape == null){
-      println("Shape is null");
-    }
+    //print(Shape);
     return Shape;
   }
 
   color getColor() {
-    
     return(Color);
   }
 }
