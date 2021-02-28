@@ -110,7 +110,7 @@ class Mice {
   }
 
   void getDNA() {
-    //dna.getShape();
+    print(dna.getShape());
     //print(dna.getColor());
   }
 }
