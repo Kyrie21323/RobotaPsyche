@@ -51,16 +51,12 @@ void setup() {
   noTrap = loadImage("noTrap.jpg");
   f = new FlowField(20);
   trap(20);
+  mouse.add(new Mice(random(0, 1300), random(0, 800), int(random(0,3))));
   cheese.add(new Cheese(random(0, 1300), random(0, 800)));
-
-  mouse.add(new Mice(width/2, height/2));
 }
 
 void mouseClicked() {
-  mouse.add(new Mice(random(0, 1300), random(0, 800)));
-  //for (Mice m : mouse) {
-  //  m.getDNA();
-  //}
+  mouse.add(new Mice(random(0, 1300), random(0, 800), int(random(0,3))));
 }
 
 void draw() {
@@ -76,8 +72,8 @@ void draw() {
     m.update();
     m.checkEdges();
     m.display();
-    //m.getDNA();
-    m.distinguish(mouse, cheese);
+    //m.
+    //m.distinguish(cheese, mouse);
   }
   
   for (Cheese c : cheese) {
