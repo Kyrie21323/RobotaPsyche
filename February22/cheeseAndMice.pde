@@ -33,7 +33,7 @@ void draw() {
     m.update();
     m.checkEdges();
     m.display();
-    //m.getDNA();
+    m.getDNA();
     m.distinguish(mouse, cheese);
   }
   for (Cheese c : cheese) {
