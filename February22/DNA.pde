@@ -1,6 +1,6 @@
 class DNA {
   int miceSize;
-  //color Color;
+  //int colors;
 
   DNA(int size) {
     miceSize = size;
@@ -11,8 +11,8 @@ class DNA {
     DNA dna = new DNA(miceSize);
     return dna;
   }
-  
-  int getSize(){
+
+  int getSize() {
     return miceSize;
   }
 
