@@ -3,22 +3,36 @@ class Mice {
   PVector velocity;
   PVector acceleration;
 
-  float r;
   float maxforce;
   float maxspeed;
   int miceSize;
   int size;
+  int count = 0;
   DNA dna;
 
   Mice(float x, float y, int size) {
     acceleration = new PVector(0, 0);
     velocity = new PVector(0, 0);
     location = new PVector(x, y);
-    r = 5.0;
 
     dna = new DNA(size);
     maxspeed = 10;
     maxforce = 5;
+    count+=1;
+  }
+
+  float getLocationX() {
+    float locX = location.x;
+    return locX;
+  }
+
+  float getLocationY() {
+    float locY = location.y;
+    return locY;
+  }
+
+  int getMiceNum() {
+    return count;
   }
 
   void update() {
@@ -66,56 +80,51 @@ class Mice {
 
   void display() {
     int SIZE = dna.getSize();
-    print(SIZE);
+    //print(SIZE);
     if (SIZE == 0) {
-      size = 20;
+      size = 5;
     } else if (SIZE == 1) {
-      size = 20;
+      size = 10;
     } else if (SIZE == 2) {
       size = 20;
-      float theta = velocity.heading() + PI/2;
-      fill(0, 0, 0);
-      stroke(0);
-      pushMatrix();
-      translate(location.x, location.y);
-      rotate(theta);
-      beginShape();
-      vertex(0, -2);
-      vertex(-2, 2);
-      vertex(2, 2);
-      endShape(CLOSE);
-      popMatrix();
     }
-
-    //void getFishSize() {
-    //  miceSize = dna.getSize();
-    //}
-
-    //void distinguish (ArrayList<Cheese> cheese, ArrayList<Mice> mice) {
-    //  float smellRange = 1000;
-    //  PVector sum = new PVector(0, 0);
-
-    //  for (Cheese smell : cheese) {
-    //    for (Mice follow : mice) {
-    //    float distance = abs(PVector.dist(smell.location, follow.location));
-
-    //    if ((distance > 0) && (distance < smellRange)) {
-    //      PVector difference = PVector.sub(smell.location, follow.location);
-    //      difference.normalize();
-    //      sum.add(difference);
-    //      sum.setMag(maxspeed);
-
-    //      PVector steer = PVector.sub(sum, velocity);
-    //      steer.limit(maxforce);
-    //      applyForce(steer);
-    //    }
-    //  }
-    //}
-    //}
-
-    //DNA getDNA() {
-    //  //dna.getShape();
-    //  //print(dna.getColor());
-    //}
+    float theta = velocity.heading() + PI/2;
+    fill(0, 0, 0);
+    stroke(0);
+    pushMatrix();
+    translate(location.x, location.y);
+    rotate(theta);
+    beginShape();
+    vertex(0, -size);
+    vertex(-size, size);
+    vertex(size, size);
+    endShape(CLOSE);
+    popMatrix();
   }
+
+  //void getFishSize() {
+  //  miceSize = dna.getSize();
+  //}
+
+  //void distinguish (ArrayList<Cheese> cheese, ArrayList<Mice> mice) {
+  //  float smellRange = 1000;
+  //  PVector sum = new PVector(0, 0);
+
+  //  for (Cheese smell : cheese) {
+  //    for (Mice follow : mice) {
+  //    float distance = abs(PVector.dist(smell.location, follow.location));
+
+  //    if ((distance > 0) && (distance < smellRange)) {
+  //      PVector difference = PVector.sub(smell.location, follow.location);
+  //      difference.normalize();
+  //      sum.add(difference);
+  //      sum.setMag(maxspeed);
+
+  //      PVector steer = PVector.sub(sum, velocity);
+  //      steer.limit(maxforce);
+  //      applyForce(steer);
+  //    }
+  //  }
+  //}
+  //}
 }
