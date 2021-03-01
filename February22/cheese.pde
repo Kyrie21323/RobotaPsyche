@@ -16,7 +16,7 @@ public class Cheese {
   }
 
   void display() {
-    fill(255,255,0);
+    fill(255, 255, 0);
     triangle(width/2 - 50, height/2 + 50, width/2, height/2 - 50, width/2 + 50, height/2 + 50);
   }
 }
