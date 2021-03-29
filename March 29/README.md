@@ -1,1 +1,16 @@
 # 5 Discussion Topics
+## 1 Robot Rights
+As David Levy has mentioned, we never know when the robots will develop into a conscious, or machine conscious, but if they do, following Jong Hwan Kim, we would have to treat them in the same way that we take care of pets while not abusing them. This futuristic society might come since they might develop into a machine that has their own motivation and emotion. Does this mean that one day we will have to not only respect them but also give them right as well? Would the society in the future consider them to be a personel and give them right just like humans? If so, what kind of rights would they be able to gain? And why do you think Jong Whan Kim say "the same way we take care of pets" instead of treating friends? If not, what kind of regulations do you think there will be to differentiate human rights and robot rights?
+
+## 2 The Mirror Test
+The mirror test by Junichi Taken and his team has shown a tiny evidence of how robots are more conscious that animals and very like human. Do you think this test is an appropriate test to examine whether the robot is conscious? Why or why not? To be honest, I think acting conscious and actually being conscious is different, and for this test, robots could easily act cconscious through coding. For example, if we let a robot act an assigned behavior and match it with what he is seeing (which would be a reflection of himself) and let it identify the reflected figure as itself, ccan we also call that conscious? What other test do you think can help us consider whether a robot is conscious or not?
+
+## 3 Developing Robot's Consciousness
+With the technology we have now, we are not able to create a robot or an artificial intelligence with consciousness. Currently, they may be able to learn what make people sad and happy with numerous data, but they are not able tto actually feel emotion. However, if the day where we have the technology to make robots conscious comes (here, meaning conscious as able to feel emotion and have motivations), do you think we should actually put the technology into our lives? Or should we leave just as an achievement of humanity? Why? In Steffen's article, he seems to like the term tool for robots which could mean that they are not conscious but only obey what we program.
+
+## 4 Power of Knowledge
+If we say that robots are tool just because they were made out of our knowledge and technology, if they ever think of theories or new concepts that humans have never thought of or prove before, how can we face this situation? Once they have started to recognize that they are smarter, better, and more efficient that us, what do you think they will do? Will they still acknowledge that they are 'below' us and acccept the way how we treat them as 'tools'?
+
+## 5 Artifact's Artifact?
+In Steffen Steinert's article, he mentions how robots are more like tools rather than human beings. Most of all, he explains that robots are classified as "artifacts" made by humans. But what if a robot gain knowledge and figures out how to duplicate, or make another robot all by themselves? What do we call them then? An artifact's artifact? When this happens, and since the artifacts know that we seem them only as tools, they are most likely to look at their artifacts as tools also. What kind of situation do you think this can make?
+
