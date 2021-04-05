@@ -1,1 +1,3 @@
-
+# Assignment 5: Vectors
+## Problems
+I had a hard time understanding the .dot() function and calculating if the output of my project is accurate in the way that I want it to be. At first, I thought that Vm had to be the exact length starting from p1 and ending at the horizontal line that passes p3 after rewatching professor's example explained in class. However, I noticed that such example exists only when p2 and p1 is on the same verticle line, and that Vm can pass through the horizontal line passing the p3. Another problem I had was to make the lines display in the right place. This did not work as I wanted at first because I have not considered that the vectors for p1,p2, and p3 start at point 0,0. So I thought of translating the two lines as much as p1's location and it worked!
