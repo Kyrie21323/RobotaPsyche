@@ -16,7 +16,7 @@ I wanted all ten of the players to acts as seperate players, but I noticed that 
 I think i have coded correctly (i believe) to steal a a ball from one team. The right team was able to successfully steal the ball from the left team whenever the red team player collided with the blue team player who holds the ball. However, although it was coded exactly the same for both players, some how the blue team just couldn't steal the ball from the red team. It correctly prints out that the steal was succesfull, but from some reason the ball decides to stick with the red team. I came to a conclusion that the red team is just way better than the blue team.
 
 ## Results
-[This is a video of how the simulation is played.](https://youtu.be/aGy0jNuC6KE)
+[This is a video of how the simulation is played.](https://youtu.be/uhQkmItaR0g)
 
 ## As I finish this semester
 It was another great semester to have a class with Prof. Michael and eventough i haven't met him in person, i culd just tell how great he is not only as a professor but also as in person! I learned a lot of new aspect on robots, that they are not just tools, but some day in the future that they could be considered as a race or something else.
