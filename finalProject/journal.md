@@ -103,13 +103,95 @@ I wrote the same code, just chaged the team from left to right on the RightTeam 
 
 After running the program, I have checked that the players move towards/chase the ball when it is in a defending position, I needed to make the defending player able to steal the ball from the other team.
 
+I had to make sure if any of the team had stole the ball with a short code below
+```
+void stealCheck() {
+    if (ifTouchRT) {
+      ifTouchLT = false;
+    } else if (ifTouchLT) {
+      ifTouchRT = false;
+    }
+  }
+```
+And I added called this function inside the update function so it would constantly check if any of the team has stolen the ball, changing the boolean which would change the team's position of defending to attacking and vice versa.
 
+I think i have coded correctly (i believe) to steal a a ball from one team. The right team was able to successfully steal the ball from the left team whenever the red team player collided with the blue team player who holds the ball. However, although it was coded exactly the same for both players, some how the blue team just couldn't steal the ball from the red team. It correctly prints out that the steal was succesfull, but from some reason the ball decides to stick with the red team. I came to a conclusion that the red team is just way better than the blue team.
 
-steal ball
-make towards rim
+Now that I'm mostly done with the interation between the balls and the players, I had to decide how to make the players score - they had to somewhat go towards the rim.
+
+I thought of making more flowfields, which I tried, but failed because I was not able to figure out how to make a flowfield where all of the vectors point towards a single point. So instead, I decided to make the players just follow the flowfield instead. This was because I would not be fun if the players can score everytime they possess a ball. Sometimes, the random flowfield will lead the players to miss the rim, and sometimes it will lead them towards the rim. So i thought of making another class for rims on both sides, and just check the distance between the player with the ball and the rim and decide that makes a score. But I was again too tired to do more codine, and decided to do this on another day.
 
 ### Day 5 (5/1)
-next game
+I finished making the rim where the initial location is abruptly the same as the one on the background. I set all of the velocity and accelertion, max speed, and max force to 0 because I knew I won't be making the rim move. Then I made the same function that returns the x and y location of the rim because I needed it to check whether the player touches the rim to score. Lastly I displayed the rim as yellow circles.
+
+Now going back to the ball class, I added a new function that could check whether the player touches the rim or not. At first i thought of calculating the distance between the player and the rim, but noticed that if I wanted many players, I also had to check if the player who has touched the rim also has the ball. So instead, I checked the distance with the ball and the rim.
+
+The problem was, I was unsure how to check the first rim in the arraylist (left rim) separately from the right rim. I googled it up on how to get only a specific list from an array list, and this was what I was able to do.
+
+```
+Rim leftRim = rim.get(0);
+Rim rightRim = rim.get(1);
+```
+After that, I calculated the x and y location of the rim and ball just like how it calculated the distance between the player and the ball, and it was successful. The only way how i noticed that this worked was, was to print "right team(left team) scored!" so i had to come up with a better plan.
+
+That is why I decided to make a score board.
+Since i am incrementing everytime the ball touches the rim (which happens inside of the class ball, and display the text on the draw function, I have claimed the int variables 'ltScore' and 'rtScore' on a global scale.
+So I incremented the corresponding int variable every time the player touches the rim. So for example, if the ball touches the left rim, it means that the right team has scored, and vice versa. I displayed the score board on the draw function inside the for loop for the ball vehicle where I call two functions 'sendRTScore()' and 'sendLTScore()'. These two functions just returns the current integer that I have incremented everytime a team scores.
+
+This all worked fine, and I called it a day.
 
 ### Day 6 (5/2)
-score board
+Today I felt like I had to make the simulation go on forever. Simulations are useless when it just simulates once and disappears. So I had to reset all of the values, and to avoid making the same result from the previous simulation, I had to change the flowfield to a new random flowfield.
+First of all, I reset the values of all of the booleans in each class.
+
+1) Class Ball
+```
+void nextGame() {
+    ifTouchRT = false;
+    ifTouchLT = false;
+    ifRTScore = false;
+    ifLTScore = false;
+  }
+```
+2) LeftTeam
+```
+void nextGame() {
+    ifDefend = false;
+  }
+```
+3) RightTeam
+```
+void nextGame() {
+    ifDefend = false;
+  }
+```
+4) ArrayLists (players/vehicles)
+Reset the ball's location as well as the players and creat a new one.
+```
+  ltplayers.clear();
+  rtplayers.clear();
+  ball.clear();
+  
+  ltplayers.add(new LeftTeam(100, 400));
+  rtplayers.add(new RightTeam(1200, 400));
+  ball.add(new Ball());
+```
+5) ForceField
+Since I haven't made an arraylist for the force field, I just had to make a new one which will be made on top of the previous flow field.
+```
+  f = new FlowField(20);
+  f.rightTeamFF();
+  f.leftTeamFF();
+```
+
+Now that the simulation works fine except for the left team not being able to steal the ball, I had to make other players.
+
+It wasn't hard making new players, but it was a whole disaster to check each and every one of 10 players whether they hold a ball, steal the ball. So I decided to keep this simulation short and clean with just one player on each team!
+
+Finally done! Yay!
+
+
+
+
+
+
