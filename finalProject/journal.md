@@ -1,6 +1,6 @@
 # Final Project - Basketball Simulation - Journal
 
-[Day 1](journal.md@day-1); [Day 2](journal.md#day-2); [Day 3](journal.md#day-3); [Day 4](journal.md#day-4); [Day 5](journal.md#day-5); [Day 6](journal.md#day-6)
+[Day 1](#day-1-(4/20)); [Day 2](#day-2-(4/23)); [Day 3](journal.md#day-3-(4/24)); [Day 4](journal.md#day-4-(4/29)); [Day 5](journal.md#day-5-(5/1)); [Day 6](journal.md#day-6-(5/2))
 
 ## Plans before start coding / concept
 Since I play basketball a lot, I thought of making a basketball game simulation. The simulation will be in bird view where 5 people on each team have different team colors. The team that has the ball will be set into a flow field of going towards the rim on the other side of the court, while trying to avoid the other team players. On the other hand, the defending team will be attracted to the closest opponent player and follow that player. But all of the five defending player will be attracted the most to the player that currently has the ball (I probably change it to how players are strongly attracted to the ball directly). When the defender and the attacker with the ball collides, the defender steals the ball and will attack towards the other side of the court with the same rules applied.
