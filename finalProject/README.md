@@ -19,6 +19,6 @@ I think i have coded correctly (i believe) to steal a a ball from one team. The 
 [This is a video of how the simulation is played.](https://youtu.be/uhQkmItaR0g)
 
 ## As I finish this semester
-It was another great semester to have a class with Prof. Michael and eventough i haven't met him in person, i culd just tell how great he is not only as a professor but also as in person! I learned a lot of new aspect on robots, that they are not just tools, but some day in the future that they could be considered as a race or something else.
+It was another great semester to have a class with Prof. Michael and eventhough i haven't met him in person, i culd just tell how great he is not only as a professor but also as in person! I learned a lot of new aspect on robots, that they are not just tools, but some day in the future that they could be considered as a race or something else.
 
 [Thank you all for a wonderful semester!](https://youtu.be/BJxbZxNtT5s)
